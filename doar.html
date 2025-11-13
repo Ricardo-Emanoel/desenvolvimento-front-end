@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações</title>
+</head>
+<body>
+    <header>
+        <h1>MEU AMIGO DO PEITO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="projeto.html">Projeto</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="doar.html">Doar</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Faça sua Doação</h1>
+        <p>Sua contribuição é vital para nosso trabalho. Escolha e a valor da sua doação.</p>
+
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Frequencia da Doação</legend>
+
+                <div>
+                    <input type="radio" id="unica" name="frequencia" value="unica" required>
+                    <label for="unica">Doação Unica</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="mensal" name="frequencia" value="mensal" required>
+                    <label for="mensal">Doação Mensal (Recorrente)</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes e Valores</legend>
+
+                <label for="valor">Valor (R$):</label>
+                <input type="number" id="valor" name="valor" min="5" step="1" required placeholder="Minimo R$ 5,00">
+
+                <label for="anonimo">
+                    <input type="checkbox" id="anonimo" name="anonimo">
+                    Desejo que minha doação seja anonima
+                </label>
+
+                <label for="comprovante">Anexar Comprovante do deposito (Opicional):</label>
+                <input type="file" id="comprovante" name="comprovante" accept=".pdf.image/*">
+            </fieldset>
+
+            <button type="submit">Confirmar Doação</button>
+            
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MEU AMIGO DO PEITO</p>
+    </footer>
+
+</body>
+</html>
