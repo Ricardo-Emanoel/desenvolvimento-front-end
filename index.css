@@ -87,6 +87,37 @@ a:hover {
     padding: var(--espaco-xxl) 0;
 }
 
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-md);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 70px;
+    margin-bottom: var(--espaco-sm);
+}
+
+.redes-sociais {
+    display: flex;
+    gap: var(--espaco-lg);
+    margin-bottom: var(--espaco-sm);
+}
+
+.redes-sociais a {
+    color: var(--cor-texto-claro);
+    font-size: var(--tamanho-h3);
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: var(--cor-secundaria);
+}
+
 .main-header {
     grid-area: header;
     background-color: var(--cor-branco);
@@ -303,6 +334,14 @@ footer {
         max-width: 100%;
         order: -1;
         margin-bottom: var(--espaco-lg);
+    }
+
+    .mission, .contact-info {
+        text-align: center;
+    }
+
+    .contact-info address {
+        font-style: normal;
     }
     
     .apresentacao-texto,
