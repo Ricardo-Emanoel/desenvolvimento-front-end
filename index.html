@@ -90,6 +90,16 @@
         </div>
         <p>&copy; 2025 MEU AMIGO DO PEITO</p>
     </footer>
+
+    <script>
+        const menuHamburguer = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.main-nav');
+
+        menuHamburguer.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuHamburguer.classList.toggle('active');
+        });
+    </script>
     
 </body>
 </html>
