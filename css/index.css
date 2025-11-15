@@ -174,7 +174,7 @@ a:hover {
 
 .hero-banner {
     grid-area: banner;
-    background-image: url('./img/banner.png');
+    background-image: url('../img/banner.png');
     background-size: cover;
     background-position: center;
     height: 450px;
@@ -293,6 +293,71 @@ footer {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+.nossos-servicos {
+    padding: var(--espaco-xxl) 0;
+    text-align: center;
+}
+
+.titulo-secao {
+    font-size: var(--tamanho-h2);
+    color: var(--cor-secundaria);
+    margin-bottom: var(--espaco-xxl);
+    position: relative;
+    padding-bottom: var(--espaco-sm);
+}
+
+.titulo-secao::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-primaria);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cards-servicos {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espaco-lg);
+}
+
+.card-servico {
+    flex: 1; /* Garante que todos tenham a mesma largura */
+    padding: var(--espaco-xl);
+    background-color: var(--cor-fundo-claro);
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+    transition: transform 0.3s ease;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-servico {
+    font-size: var(--tamanho-h1);
+    color: var(--cor-primaria);
+    margin-bottom: var(--espaco-md);
+    display: block;
+}
+
+.card-servico h3 {
+    font-size: var(--tamanho-h3);
+    margin-bottom: var(--espaco-sm);
+    color: var(--cor-secundaria);
+}
+
+.card-servico p {
+    font-size: var(--tamanho-base);
+    color: var(--cor-texto-escuro);
+    margin-bottom: 0;
+}
+
 @media (max-width: 1199px) {
     .container {
         max-width: 960px;
@@ -321,6 +386,11 @@ footer {
     
     .mission, .contact-info {
         grid-column: 1 / span 12;
+    }
+
+    .cards-servicos {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -403,7 +473,7 @@ footer {
     }
     
     .hero-banner {
-        height: 250px;
+        height: 200px;
     }
     .container {
         width: 95%;
@@ -412,6 +482,20 @@ footer {
     }
     h1 { font-size: var(--tamanho-h2); }
     h2 { font-size: var(--tamanho-h3); }
+
+    .cards-servicos {
+        flex-direction: column;
+        gap: var(--espaco-xl);
+    }
+    
+    .card-servico {
+        flex: none;
+        width: 100%;
+    }
+
+    .titulo-secao {
+        font-size: var(--tamanho-h3);
+    }
 }
 
 @media (max-width: 575px) {
@@ -422,7 +506,7 @@ footer {
         height: 45px;
     }
     .hero-banner {
-        height: 200px;
+        height: 150px;
     }
     h1 { font-size: var(--tamanho-h3); }
     h2 { font-size: var(--tamanho-h4); }
