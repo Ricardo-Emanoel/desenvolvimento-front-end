@@ -403,7 +403,7 @@ footer {
     }
     
     .hero-banner {
-        height: 300px;
+        height: 250px;
     }
     .container {
         width: 95%;
@@ -422,7 +422,7 @@ footer {
         height: 45px;
     }
     .hero-banner {
-        height: 250px;
+        height: 200px;
     }
     h1 { font-size: var(--tamanho-h3); }
     h2 { font-size: var(--tamanho-h4); }
