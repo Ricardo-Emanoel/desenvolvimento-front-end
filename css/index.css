@@ -517,6 +517,10 @@ footer {
     .voluntariado-imagem {
         max-width: 100%;
     }
+
+    .voluntariado-imagem img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 575px) {
