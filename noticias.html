@@ -4,69 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/noticias.css">
 </head>
 <body>
     
-    <header>
-        <h1>MEU AMIGO DO PEITO</h1>
-        <nav>
+    <header class="main-header">
+        <div class="logo">
+            <img src="./img/logo-in.png" alt="Logo Meu Amigo do Peito">
+        </div>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="projeto.html">Projeto</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="doar.html">Doar</a></li>
+                <li><a href="noticias.html" class="active">Noticias</a></li>
+                <li><a href="doar.html" class="btn-doar">Doar</a></li>
                 <li><a href="contatos.html">Contatos</a></li>
             </ul>
         </nav>
+        
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
     </header>
 
-    <main>
-        <h1>Ultimas noticias e atualizações</h1>
+    <section class="page-title-banner">
+        <h1>Últimas Notícias e Atualizações</h1>
+    </section>
 
-        <section>
-            <h2>Destaques recentes</h2>
+    <main class="noticias-main">
+        <div class="container noticias-grid">
+            
+            <section class="secao-artigos">
+                <h2 class="titulo-secao">Destaques Recentes</h2>
 
-            <article>
-                <header>
-                    <h3>Impacto do projeto "Alimentos para nosssos amigos" em 2025</h3>
-                    <p><time datetime="23-12-2025">Publicado dia 23 de Dezembro de 2025</time></p>
-                </header>
-                <p>Neste ano, conseguimos alcançar 578 animais em situações de rua com doações regulares, superando nossa meta inicial. Veja os detalhes e depimentos.</p>
-                <a href="noticias-1.html">Leia mais...</a>
-                <footer>
-                    <p>Categoria: <a href="#">Resultados</a></p>
-                </footer>
-            </article>
+                <article class="noticia-card">
+                    <img src="./img/noticias/destaque1.jpg" alt="Foto de animais recebendo alimentos" class="noticia-imagem">
+                    <div class="noticia-conteudo">
+                        <header>
+                            <h3>Impacto do projeto "Alimentos para Nossos Amigos" em 2025</h3>
+                            <p class="noticia-data"><time datetime="2025-12-23">Publicado dia 23 de Dezembro de 2025</time></p>
+                        </header>
+                        <p>Neste ano, conseguimos alcançar 578 animais em situações de rua com doações regulares, superando nossa meta inicial. Veja os detalhes e depoimentos de quem ajudou.</p>
+                        <a href="noticias-1.html" class="btn-leia-mais">Leia mais...</a>
+                        <footer>
+                            <p class="noticia-categoria">Categoria: <a href="#">Resultados</a></p>
+                        </footer>
+                    </div>
+                </article>
 
-            <article>
-                <header>
-                    <h3>Convocação para novos voluntarios em Janeiro de 2026</h3>
-                    <p><time datetime="20-12-2025">Publicado dia 20 de Dezembro de 2025</time></p>
-                </header>
-                <p>Estamos abrindo novas vagas para voluntarios nas areas de coleta de alimentos</p>
-                <a href="noticias-2.html">Leia mais...</a>
-                <footer>
-                    <p>Categoria:<a href="#">Voluntarios</a></p>
-                </footer>
-            </article>
-        </section>
+                <article class="noticia-card">
+                    <img src="./img/noticias/destaque2.jpg" alt="Foto de voluntários felizes" class="noticia-imagem">
+                    <div class="noticia-conteudo">
+                        <header>
+                            <h3>Convocação para Novos Voluntários em Janeiro de 2026</h3>
+                            <p class="noticia-data"><time datetime="2025-12-20">Publicado dia 20 de Dezembro de 2025</time></p>
+                        </header>
+                        <p>Estamos abrindo novas vagas para voluntários nas áreas de coleta de alimentos, transporte de pets e organização de eventos. Junte-se à causa!</p>
+                        <a href="noticias-2.html" class="btn-leia-mais">Leia mais...</a>
+                        <footer>
+                            <p class="noticia-categoria">Categoria: <a href="#">Voluntários</a></p>
+                        </footer>
+                    </div>
+                </article>
+               
+                <article class="noticia-card">
+                    <img src="./img/noticias/destaque3.jpg" alt="Animais de estimação resgatados" class="noticia-imagem">
+                    <div class="noticia-conteudo">
+                        <header>
+                            <h3>Feira de Adoção de Natal: Sucesso Absoluto!</h3>
+                            <p class="noticia-data"><time datetime="2025-12-15">Publicado dia 15 de Dezembro de 2025</time></p>
+                        </header>
+                        <p>Agradecemos a todos que compareceram. Mais de 30 animais encontraram um novo lar para as festas de fim de ano. Confira as fotos!</p>
+                        <a href="#" class="btn-leia-mais">Leia mais...</a>
+                        <footer>
+                            <p class="noticia-categoria">Categoria: <a href="#">Eventos</a></p>
+                        </footer>
+                    </div>
+                </article>
 
-        <aside>
-            <h2>Pesquisar Noticias</h2>
-            <form action="#">
-                <input type="search" placeholder="Buscar no Blog..." name="busca">
-                <button type="submit">Buscar</button>
-            </form>
-        </aside>
+            </section>
+
+            <aside class="barra-lateral">
+             
+                <div class="widget">
+                    <h2 class="widget-titulo">Pesquisar Notícias</h2>
+                    <form action="#" class="form-busca">
+                        <input type="search" placeholder="Buscar no Blog..." name="busca">
+                        <button type="submit" class="btn-principal"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+               
+                <div class="widget">
+                    <h2 class="widget-titulo">Categorias</h2>
+                    <ul class="lista-categorias">
+                        <li><a href="#">Resultados (3)</a></li>
+                        <li><a href="#">Voluntários (5)</a></li>
+                        <li><a href="#">Eventos (8)</a></li>
+                        <li><a href="#">Dicas de Cuidado (12)</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h2 class="widget-titulo">Posts Recentes</h2>
+                    <ul class="lista-posts-recentes">
+                        <li><a href="#">🐾 Feira de Adoção de Natal</a></li>
+                        <li><a href="#">🍲 Campanha de Cobertores de Inverno</a></li>
+                        <li><a href="#">🏥 Mutirão de Castração Gratuita</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 MEU AMIGO DO PEITO</p>
+
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="./img/logo.png" alt="Logo Meu Amigo do Peito - Rodapé">
+            </div>
+            
+            <div class="redes-sociais">
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+        
+        <p>&copy; 2025 MEU AMIGO DO PEITO | Todos os direitos reservados.</p>
+    
     </footer>
+
+    <script>
+        const menuHamburguer = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.main-nav');
+        
+        menuHamburguer.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuHamburguer.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
