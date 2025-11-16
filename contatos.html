@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contatos</title>
+    <title>contatos | Meu Amigo do Peito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/contato.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>MEU AMIGO DO PEITO</h1>
-        <nav>
+    <header class="main-header">
+
+        <div class="logo">
+            <img src="./img/logo-in.png" alt="Logo Meu Amigo do Peito">
+        </div>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="projeto.html">Projeto</a></li>
@@ -17,57 +26,111 @@
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="doar.html">Doar</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="doar.html" class="btn-doar">Doar</a></li>
+                <li><a href="contatos.html" class="active">Contatos</a></li>
             </ul>
         </nav>
 
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
 
+    <section class="page-title-banner">
+        <h1>Fale Conosco</h1>
+    </section>
+
     <main>
-        <h1>Fale com nosco</h1>
-        <p>Preencha o formulario a baixo para enviar suas duvidas ou sugestões.</p>
 
-        <form action="#" method="POST">
-            <fieldset>
-                <legend>Informações basicas</legend>
+        <div class="contato-container">
 
-                <label for="nome">Seu nome:</label>
-                <input type="text" id="nome" name="nome" required>
+            <section class="contato-form-section">
 
-                <label for="email">Seu E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <h2 class="titulo-secao">Envie sua Mensagem</h2>
 
-                <label for="assunto">Assunto da mensagem:</label>
-                 <select id="assunto" name="assuto" required>
-                    <option value="">Selecione um Assunto</option>
-                    <option value="duvida">Duvida sobre Doações</option>
-                    <option value="sugestão">Sugestão / feedback</option>
-                    <option value="parceria">Proposta de Parceria</option>
-                 </select>
-        
-            </fieldset>
-            <fieldset>
-                <legend>Detalhe da Mensagem</legend>
+                <p class="descricao-contato">Preencha o formulário abaixo para enviar dúvidas, sugestões ou propostas de parceria.</p>
 
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
-            </fieldset>
-            
-        </form>
+                <form action="#" method="POST" class="contato-form">
 
-        <section>
-            <h2>Outras Formas de Contato</h2>
-            <address>
-                <p>Telefone: <a href="tel:+5598999999999">(98) 999 99999-9999</a></p>
-                <p>Email:<a href="Email:contato@org.com">contato@org.com</a></p>
-            </address>
-        </section>
+                    <fieldset>
+                        <legend>Informações Básicas</legend>
+
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <label for="email">Seu E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="assunto">Assunto da Mensagem:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um Assunto</option>
+                            <option value="duvida">Dúvida sobre Doações</option>
+                            <option value="sugestao">Sugestão / Feedback</option>
+                            <option value="parceria">Proposta de Parceria</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Detalhes da Mensagem</legend>
+
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                    </fieldset>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+
+                </form>
+
+            </section>
+
+            <aside class="contato-info">
+                <h2 class="titulo-secao">Outras Formas de Contato</h2>
+
+                <p><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> <a href="tel:+5598999999999">(98) 99999-9999</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <strong>E-mail:</strong> <a href="mailto:contato@org.com">contato@org.com</a></p>
+
+                <div class="contato-social">
+                    <h3>Siga nossas redes</h3>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </aside>
+
+        </div>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 MEU AMIGO DO PEITO</p>
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="./img/logo.png" alt="Logo Meu Amigo do Peito - Rodapé">
+            </div>
+
+            <div class="redes-sociais">
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <p>&copy; 2025 MEU AMIGO DO PEITO | Todos os direitos reservados.</p>
+
     </footer>
+
+    <script>
+    
+        const menuHamburguer = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.main-nav');
+        
+        menuHamburguer.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuHamburguer.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
