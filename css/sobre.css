@@ -1,0 +1,129 @@
+.secao-historia {
+    padding: var(--espaco-xxl) 0;
+}
+
+.historia-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espaco-xxl);
+    margin-top: var(--espaco-xl);
+}
+
+.historia-texto {
+    flex: 1;
+    padding-right: var(--espaco-lg);
+}
+
+.historia-texto h3 {
+    color: var(--cor-secundaria);
+}
+
+.historia-imagem {
+    flex: 1;
+    max-width: 400px; 
+    border-radius: var(--borda-arredondada);
+    overflow: hidden;
+    box-shadow: var(--sombra-padrao);
+    margin-top: var(--espaco-lg);
+}
+
+.historia-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.secao-mvv {
+    padding: var(--espaco-xxl) 0;
+    text-align: center;
+}
+
+.mvv-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espaco-lg);
+    margin-top: var(--espaco-xl);
+}
+
+.card-mvv {
+    flex: 1;
+    padding: var(--espaco-xl);
+    background-color: var(--cor-fundo-claro);
+    border-top: 5px solid var(--cor-primaria);
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+    transition: transform 0.3s ease;
+}
+
+.card-mvv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-mvv {
+    font-size: var(--tamanho-h1);
+    color: var(--cor-primaria);
+    margin-bottom: var(--espaco-md);
+    display: block;
+}
+
+.card-mvv h3 {
+    font-size: var(--tamanho-h3);
+    margin-bottom: var(--espaco-md);
+    color: var(--cor-secundaria);
+}
+
+.card-mvv ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: var(--espaco-lg);
+}
+
+.card-mvv ul li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: var(--espaco-sm);
+    font-size: var(--tamanho-base);
+}
+
+.card-mvv ul li::before {
+    content: "🐾";
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+}
+
+@media (max-width: 991px) {
+    .historia-conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--espaco-xl);
+    }
+    
+    .historia-texto {
+        padding-right: 0;
+    }
+
+    .historia-imagem {
+        max-width: 100%;
+    }
+
+    .mvv-cards {
+        flex-direction: column;
+        gap: var(--espaco-xl);
+    }
+}
+
+@media (max-width: 767px) {
+    .historia-texto {
+        text-align: center;
+    }
+    .historia-texto h3 {
+        text-align: center;
+    }
+    .historia-texto .btn-principal {
+        width: 100%;
+        display: block;
+    }
+}
