@@ -523,6 +523,18 @@ footer {
     }
 }
 
+@media (max-width: 600px) {
+    .cadastro-form {
+        padding: var(--espaco-lg);
+        margin: var(--espaco-lg) var(--espaco-sm);
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: var(--espaco-md);
+    }
+}
+
 @media (max-width: 575px) {
     .main-header {
         padding: var(--espaco-sm);
@@ -597,4 +609,93 @@ footer {
     background-size: 16px;
     padding-left: 25px;
     margin-bottom: var(--espaco-sm);
+}
+
+.cadastro-form {
+    max-width: 800px;
+    margin: var(--espaco-xl) auto;
+    padding: var(--espaco-xl);
+    border-radius: var(--borda-arredondada);
+    background-color: var(--cor-fundo-claro);
+    box-shadow: var(--sombra-padrao);
+}
+
+.form-intro {
+    text-align: center;
+    margin-bottom: var(--espaco-xl);
+    color: var(--cor-texto-escuro);
+}
+
+.cadastro-form fieldset {
+    border: 1px solid var(--cor-borda);
+    padding: var(--espaco-lg);
+    margin-bottom: var(--espaco-xl);
+    border-radius: var(--borda-arredondada-sm);
+}
+
+.cadastro-form legend {
+    font-size: var(--tamanho-h4);
+    font-weight: 700;
+    color: var(--cor-primaria);
+    padding: 0 var(--espaco-sm);
+}
+
+.cadastro-form label {
+    display: block;
+    margin-top: var(--espaco-md);
+    margin-bottom: var(--espaco-sm);
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+}
+
+.cadastro-form input[type="text"],
+.cadastro-form input[type="email"],
+.cadastro-form input[type="tel"],
+.cadastro-form input[type="date"],
+.cadastro-form select {
+    width: 100%;
+    padding: var(--espaco-md);
+    margin-bottom: var(--espaco-md);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-arredondada-sm);
+    box-sizing: border-box;
+    font-size: var(--tamanho-p);
+    transition: border-color 0.3s;
+}
+
+.cadastro-form input:focus,
+.cadastro-form select:focus {
+    border-color: var(--cor-primaria);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espaco-lg);
+    margin-top: var(--espaco-xl);
+}
+
+.form-actions .btn-principal,
+.form-actions .btn-secundario {
+    flex: 1;
+    padding: var(--espaco-md) var(--espaco-lg);
+    font-size: var(--tamanho-base);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--borda-arredondada);
+    text-align: center;
+    text-transform: uppercase; 
+    font-weight: 700;
+}
+
+.btn-secundario {
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-texto-claro);
+    transition: background-color 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: #214364;
 }
