@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doações</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/doar.css">
 </head>
 <body>
-    <header>
-        <h1>MEU AMIGO DO PEITO</h1>
-        <nav>
+    <header class="main-header">
+
+        <div class="logo">
+            <img src="./img/logo-in.png" alt="Logo Meu Amigo do Peito">
+        </div>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="projeto.html">Projeto</a></li>
@@ -16,55 +25,102 @@
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="doar.html">Doar</a></li>
+                <li><a href="doar.html" class="btn-doar">Doar</a></li>
                 <li><a href="contatos.html">Contatos</a></li>
             </ul>
         </nav>
 
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
 
+    <section class="doar-title-banner">
+        <h1>Faça Sua Doação</h1>
+    </section>
+
+
     <main>
-        <h1>Faça sua Doação</h1>
-        <p>Sua contribuição é vital para nosso trabalho. Escolha e a valor da sua doação.</p>
 
-        <form action="#" method="POST">
-            <fieldset>
-                <legend>Frequencia da Doação</legend>
-
-                <div>
-                    <input type="radio" id="unica" name="frequencia" value="unica" required>
-                    <label for="unica">Doação Unica</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="mensal" name="frequencia" value="mensal" required>
-                    <label for="mensal">Doação Mensal (Recorrente)</label>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Detalhes e Valores</legend>
-
-                <label for="valor">Valor (R$):</label>
-                <input type="number" id="valor" name="valor" min="5" step="1" required placeholder="Minimo R$ 5,00">
-
-                <label for="anonimo">
-                    <input type="checkbox" id="anonimo" name="anonimo">
-                    Desejo que minha doação seja anonima
-                </label>
-
-                <label for="comprovante">Anexar Comprovante do deposito (Opicional):</label>
-                <input type="file" id="comprovante" name="comprovante" accept=".pdf.image/*">
-            </fieldset>
-
-            <button type="submit">Confirmar Doação</button>
+        <div class="doar-container">
             
-        </form>
+            <section class="doar-form-section">
+                <h2 class="doar-form-title">Escolha como deseja ajudar</h2>
+                
+                <form action="#" method="POST" enctype="multipart/form-data" class="doar-form">
+                    
+                    <fieldset>
+                        
+                        <legend>Frequência da Doação</legend>
+                        
+                        <label class="doar-radio">
+                            <input type="radio" name="frequencia" value="unica" required>Doação Única
+                        </label>
+                        
+                        <label class="doar-radio">
+                            <input type="radio" name="frequencia" value="mensal" required>
+                            Doação Mensal (Recorrente)
+                        </label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        
+                        <legend>Detalhes e Valor</legend>
+                        
+                        <label for="valor">Valor (R$):</label>
+                        <input type="number" id="valor" name="valor" min="5" step="1"required placeholder="Mínimo R$ 5,00">
+                        
+                        <label class="form-checkbox">
+                            <input type="checkbox" id="anonimo" name="anonimo">
+                            Desejo que minha doação seja anônima
+                        </label>
+                        
+                        <label for="comprovante">Anexar Comprovante (Opcional):</label>
+                        <input type="file" id="comprovante" name="comprovante"accept=".pdf, image/*">
+                    
+                    </fieldset>
+                    
+                    <button type="submit" class="btn-principal">Confirmar Doação</button>
+                
+                </form>
+            
+            </section>
+
+        </div>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 MEU AMIGO DO PEITO</p>
+
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="./img/logo.png" alt="Logo Meu Amigo do Peito - Rodapé">
+            </div>
+            
+            <div class="redes-sociais">
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+        
+        <p>&copy; 2025 MEU AMIGO DO PEITO | Todos os direitos reservados.</p>
+    
     </footer>
+
+    <script>
+    
+        const menuHamburguer = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.main-nav');
+        
+        menuHamburguer.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuHamburguer.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>

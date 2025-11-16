@@ -1,0 +1,126 @@
+.doar-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.doar-title-banner {
+    background: #1e88e5;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.doar-title-banner h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.doar-title-banner p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+}
+
+.doar-form-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    margin-bottom: 60px;
+}
+
+.doar-form-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.doar-form fieldset {
+    border: 2px solid #ff914d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.doar-form legend {
+    color: #ff914d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+.doar-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 500;
+}
+
+.doar-input,
+.doar-file {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.doar-radio,
+.doar-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.doar-radio input,
+.doar-checkbox input {
+    transform: scale(1.2);
+}
+
+.btn-doar {
+    background: #ff914d;
+    color: #fff;
+    border: none;
+    padding: 14px 25px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.25s;
+}
+
+.btn-doar:hover {
+    background: #ff7a29;
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+
+    .doar-title-banner {
+        padding: 35px 15px;
+    }
+
+    .doar-title-banner h1 {
+        font-size: 1.9rem;
+    }
+
+    .doar-form-section {
+        padding: 20px;
+    }
+
+    .doar-input {
+        font-size: 0.95rem;
+    }
+
+    .btn-doar {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
