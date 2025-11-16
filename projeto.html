@@ -3,50 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos sociais</title>
+    <title>Projeto | Meu Amigo do Peito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>MEU AMIGOS DO PEITO</h1>
-        <nav>
+    <header class="main-header">
+
+        <div class="logo">
+            <img src="./img/logo-in.png" alt="Logo Meu Amigo do Peito">
+        </div>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="projeto.html">Projeto</a></li>
+                <li><a href="projeto.html" class="active">Projeto</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="doar.html">Doar</a></li>
+                <li><a href="doar.html" class="btn-doar">Doar</a></li>
                 <li><a href="contados.html">Contatos</a></li>
             </ul>
         </nav>
 
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
 
+    <section class="page-title-banner">
+        <h1>Nossos Projetos e Voluntariado</h1>
+    </section>
+
     <main>
-        <section>
-            <h1>Projetos sociais e voluntariado</h1>
-            <article>
-                <h2>Seja um voluntario</h2><p>descubra como se tornar um voluntario para nossa causa</p>
-                <h3>Como funciona o Voluntariado</h3>
-                <ul>
-                    <li>Inscrinção online para voluntarios</li>
-                    <li>Entrevista e treinamento</li>
-                    <li>Inicio das atividades</li>
-                </ul>
-                <img src="assets/imagens/voluntariado.jpg" alt="Voluntarios que fazem a difença">
-            </article>
-        </section>
-        <section>
-            <h2>Doações</h2>
-            <p>Sua doação é de grante importancia para nosso projeto, nos ajude a ajudar.</p>
-        </section>
+
+        <div class="container">
+
+            <section class="projeto-voluntariado" style="grid-column: 1 / span 12;">
+                <article class="voluntariado-conteudo">
+                    <h2>Junte-se a Nós e Transforme Vidas!</h2>
+
+                    <div class="voluntariado-detalhes">
+                        <div class="voluntariado-texto">
+                            <p>Nossos projetos só ganham vida graças a pessoas como você — dispostas a doar tempo, carinho e energia para fazer a diferença. Cada gesto, por menor que pareça, ajuda a construir um caminho de amor e acolhimento para os animais que tanto precisam. Ser voluntário é mais do que ajudar: é fazer parte de uma família que acredita na compaixão, no cuidado e na esperança.</p>
+                            <p>Aqui, valorizamos cada contribuição e acolhemos todos que desejam somar nessa missão tão especial. Se você sente no coração o desejo de mudar o mundo — começando pela vida de um animal — então este é o seu lugar. Venha fazer parte dos nossos projetos e construir conosco histórias de afeto, resgate e novos começos.</p>
+
+                            <h3>Como funciona o Voluntariado</h3>
+                            <ul>
+                                <li>Inscrição online no formulário de voluntários</li>
+                                <li>Entrevista e treinamento com nossa equipe</li>
+                                <li>Início das atividades e acompanhamento contínuo</li>
+                            </ul>
+
+                            <a href="cadastro.html" class="btn-principal">Descubra como se tornar um voluntário</a>
+                        </div>
+
+                        <figure class="voluntariado-imagem">
+                            <img src="./img/voluntarios-2.png" alt="Voluntários que fazem a diferença">
+                        </figure>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="projeto-doacoes" style="grid-column: 1 / span 12; text-align: center;">
+                <h2 class="titulo-secao">Doações</h2>
+                <p>Sua doação é de grande importância para nosso projeto, nos ajude a ajudar.</p>
+                <a href="doar.html" class="btn-principal">Faça sua Doação Agora</a>
+            </section>
+        </div>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 MEU AMIGO DO PEITO</p>
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="./img/logo.png" alt="Logo Meu Amigo do Peito - Rodapé">
+            </div>
+
+            <div class="redes-sociais">
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <p>&copy; 2025 MEU AMIGO DO PEITO | Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const menuHamburguer = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.main-nav');
+        
+        menuHamburguer.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuHamburguer.classList.toggle('active');
+        });
+    </script>
     
 </body>
 </html>
